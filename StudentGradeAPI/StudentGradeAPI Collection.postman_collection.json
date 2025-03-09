@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "eab84208-932a-4035-9857-5ee5411f1277",
+		"name": "StudentGradeAPI Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42755669"
+	},
+	"item": [
+		{
+			"name": "Add a Student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Garcia\",\r\n    \"firstName\": \"Juan\",\r\n    \"midtermScore\": 80,\r\n    \"finalScore\": 85\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Students",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a Single Student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Student's Scores",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"midtermScore\": 90,\r\n    \"finalScore\": 88\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Student",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve All Final Grades",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/StudentGradeAPI/?finalGrades=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"StudentGradeAPI",
+						""
+					],
+					"query": [
+						{
+							"key": "finalGrades",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
